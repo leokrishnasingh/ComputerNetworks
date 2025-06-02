@@ -16,11 +16,11 @@ there are 7 layers OSI reference model
 
 L7 - APPLICATION LAYER
 
-software   ---   protocols
-browser          Http/s , FTP
-outlook          SMTP
-skype            skype-protocol
-remote desktop   telnet , RDP
+Software         -   Protocols
+browser          -   Http/s , FTP
+outlook          -   SMTP
+skype            -   skype-protocol
+remote desktop   -   telnet , RDP
 
 
 Application layer send data to presentation layer , then presentation layer process that and send it to lower level
