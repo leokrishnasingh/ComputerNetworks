@@ -23,8 +23,9 @@ skype            -   skype-protocol
 remote desktop   -   telnet , RDP
 
 
-Application layer send data to presentation layer , then presentation layer process that and send it to lower level
+
 L6 - PRESENTATION LAYER
+Application layer send data to presentation layer , then presentation layer process that and send it to lower level
 
 - transalation        :   ascii/unicode -> binary
 - data compression    :   compression algo like hauffman algo (Text/audio/video) 
