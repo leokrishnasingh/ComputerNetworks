@@ -72,3 +72,10 @@ UDP (user datagram protocol)
 3. video chat
 
 
+L3 : NETWORK LAYER
+-> packets ( segments + src + dest IP address)
+-> logical addressing (finding IP address of the network from the IP)
+-> routing (mask) using logical addressing to route the call from sender to receiver 
+-> path determination (finding the sortest network path as there are multiple path to reach the destination) using graph theory
+
+
