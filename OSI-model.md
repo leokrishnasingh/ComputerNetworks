@@ -45,9 +45,9 @@ responsible for
 L4 - TRANSPORT LAYER
 responsible for transportation of the data 
 
--segmentation : the data is divided into small segments that will be transported as a chunk(packet)
+-segmentation : the data is divided into small segments (seq number + port + data)  that will be transported as a chunk(packet)
 example is , we need to send 1000 bytes of data then that 1000 bytes can be divided into 10 segments of 100 bytes 
-each segment have a 
+each segment  have a 
     * sequence number which will be used at the receiving end to identify the main data in the sequence (its not guarantee that seq1 will be received first at receiver side)
     * port number will be used by the software that will lbe listening over that port which will receive the data (eg port 80 is used by browser)
 
@@ -74,8 +74,34 @@ UDP (user datagram protocol)
 
 L3 : NETWORK LAYER
 -> packets ( segments + src + dest IP address)
--> logical addressing (finding IP address of the network from the IP)
+-> logical addressing (finding IP address of the network from the IP of the destination)
 -> routing (mask) using logical addressing to route the call from sender to receiver 
 -> path determination (finding the sortest network path as there are multiple path to reach the destination) using graph theory
+
+
+L2 : DATALINK LAYER
+this layer is responsible for sending our datat from our server/Host to the router that will send the data further to destination 
+-> there are 3 medium/hardware for connecting from host to router
+   - ethernet (NIC card )
+   - wifi (wifi chip)
+   - fibre optic cable (hardware for fibre optic might be NIC will serve the need for fibre optic as well)
+
+every hardware have a unique MAC address
+
+in Data link layer we have frames which is combination of below 
+   MACsource + MACdestination + IPs + IPd + segment + Tail
+
+tail consist of some extra information (Error detection codes, like check sum)  
+
+
+L1 : PHYSICAL LAYER
+We have BITS as the data that is converted into signals, this happens in physical layer
+
+for copper wire : electrical signals __||||___||||  
+for fibre optic : laser (ON / OFF) signal are used
+fpr wifi : radio signals are used
+
+
+
 
 
